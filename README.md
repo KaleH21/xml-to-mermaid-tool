@@ -96,6 +96,20 @@ Khi sơ đồ có nhiều khối, Mermaid sẽ thu toàn bộ SVG vào vùng hi�
 python -m unittest discover -s tests -v
 ```
 
+## Build file EXE trên Windows
+
+Chạy một lệnh từ thư mục dự án:
+
+```powershell
+.\build_exe.bat
+```
+
+Script sẽ tự cài PyInstaller nếu máy chưa có, sau đó tạo duy nhất một file chạy giao diện tại:
+
+```text
+dist\xml-to-mermaid.exe
+```
+
 ## Giới hạn
 
 Mermaid và draw.io không có tập shape tương đương hoàn toàn. Tool ưu tiên giữ cấu trúc luồng, nội dung và loại shape chính; màu sắc, font, kích thước và vị trí tuyệt đối không được chuyển đổi. Các connector không có đủ đầu mút và không thể suy ra sẽ được bỏ qua kèm cảnh báo trên `stderr`.
